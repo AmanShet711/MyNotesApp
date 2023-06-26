@@ -11,6 +11,9 @@ import io.realm.Sort;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewManager;
+import android.widget.ImageButton;
 
 import com.google.android.material.button.MaterialButton;
 
@@ -22,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        MaterialButton addNoteBtn = findViewById(R.id.addnewnotebtn);
+        ImageButton addNoteBtn = findViewById(R.id.plus);
+        // Add a new button to the toolbar
+
+
 
         addNoteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,AddNoteActivity.class));
             }
         });
+
 
         Realm.init(getApplicationContext());
         Realm realm = Realm.getDefaultInstance();

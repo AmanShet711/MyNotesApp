@@ -4,59 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:background="#00B0FF"
     android:padding="20dp"
     tools:context=".AddNoteActivity">
 
     <TextView
+        android:id="@+id/titletextview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/titletextview"
-        android:text="Add new note"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        android:textStyle="bold"
+        android:layout_margin="20dp"
         android:gravity="center"
-        android:layout_margin="20dp"/>
+        android:text="New note"
+        android:textColor="#00BCD4"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp"
         android:layout_margin="10dp"
-        android:background="@drawable/rounded_corner">
+        android:background="#AEE0E1E4"
+        android:orientation="vertical"
+        android:padding="10dp">
+
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/titleinput"
-            android:hint="Title"
-            android:background="#3000B0FF"
-            android:padding="10dp"
-            android:layout_margin="10dp"/>
-        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/descriptioninput"
-            android:hint="Decription"
-            android:background="#3000B0FF"
-            android:padding="10dp"
             android:layout_margin="10dp"
+            android:background="#00BCD4"
+            android:hint="Title"
+            android:padding="10dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/descriptioninput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#00BCD4"
+            android:gravity="top"
+            android:hint="Decription"
             android:lines="10"
-            android:gravity="top"/>
+            android:padding="10dp"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/savebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/savebtn"
-        android:text="SAVE NOTE"
         android:layout_gravity="center"
-        android:backgroundTint="@color/white"
-        android:textColor="#00B0FF"/>
+        android:backgroundTint="#00BCD4"
+        android:text="SAVE NOTE"
+        android:textColor="@color/black" />
 
 
 </LinearLayout>
